@@ -20,7 +20,7 @@ public class Word
         _isHidden = false;
     }
 
-    public bool isHidden()
+    public bool IsHidden()
     {
         return _isHidden;
     }
