@@ -2,16 +2,17 @@ using System;
 
 public class Comment
 {
-    public string _commenter_name;
-    public string _text;
+    private string _commenter_name;
+    private string _text;
 
-    public Comment()
+    public Comment(string author, string commentation)
     {
-        
+       _commenter_name = author;
+       _text = commentation;
     }
 
-    public void GetComment()
+    public string GetComment()
     {
-        
+        return $"{_commenter_name}: {_text}";
     }
 }
