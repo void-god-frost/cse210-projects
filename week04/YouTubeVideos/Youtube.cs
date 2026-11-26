@@ -33,13 +33,13 @@ public class Youtube
             Console.WriteLine();
         }
     }
-    public void AddCommentToVideo(string video_title, string author, string comment_text)
+    public void AddCommentToVideo(string videoTitle, string author, string commentText)
     {
         foreach (Video video in _videos)
         {
-            if (video.GetTitleOfVideo() == video_title)
+            if (video.GetTitleOfVideo() == videoTitle)
             {
-                video.AddComment(author, comment_text);
+                video.AddComment(author, commentText);
                 return;
             }
         }
