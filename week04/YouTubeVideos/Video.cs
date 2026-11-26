@@ -40,4 +40,8 @@ public class Video
             Console.WriteLine(line.GetComment());
         }
     }
+    public string GetTitleOfVideo()
+    {
+        return $"{_title}";
+    }
 }

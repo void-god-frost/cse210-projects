@@ -13,6 +13,6 @@ public class Comment
 
     public string GetComment()
     {
-        return $"{_commenter_name}: {_text}";
+        return $"Author: {_commenter_name}: Commented: {_text}";
     }
 }

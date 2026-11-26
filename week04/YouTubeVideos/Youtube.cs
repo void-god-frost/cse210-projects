@@ -1,4 +1,6 @@
 using System;
+using System.Reflection;
+using Microsoft.VisualBasic;
 
 public class Youtube
 {
@@ -15,11 +17,31 @@ public class Youtube
         _videos.Add(video);
     }
 
+    public void AddVideo(Video video)
+    {
+        _videos.Add(video);
+    }
+
     public void DisplayVideos()
     {
         foreach (Video video in _videos)
         {
             video.DisplayVideo();
+            Console.WriteLine();
+            video.DisplayComments();
+            Console.WriteLine("Comment Count: {0}", video.CountComments());
+            Console.WriteLine();
+        }
+    }
+    public void AddCommentToVideo(string video_title, string author, string comment_text)
+    {
+        foreach (Video video in _videos)
+        {
+            if (video.GetTitleOfVideo() == video_title)
+            {
+                video.AddComment(author, comment_text);
+                return;
+            }
         }
     }
 }
